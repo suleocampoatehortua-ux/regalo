@@ -2,75 +2,75 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>Feliz Cumpleaños Amor</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=EB+Garamond:wght@400;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#fcf7f8;color:#4a232b;font-family:'Cormorant Garamond',serif;overflow-x:hidden;position:relative}
+body{background:#fdfbf7;color:#4a3b32;font-family:'Cormorant Garamond',serif;overflow-x:hidden;position:relative;-webkit-tap-highlight-color:transparent}
 
 /* PORTADA */
-#portada{position:relative;min-height:100vh;min-height:100svh;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;overflow:hidden;background:#2a1218;padding:20px 20px 35px}
+#portada{position:relative;min-height:100vh;min-height:100dvh;width:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;text-align:center;overflow:hidden;background:#241d18;padding:20px 20px 35px}
 #portada::after{content:'';position:absolute;inset:0;background-image:url('foto7.jpeg');background-size:cover;background-position:center;filter:blur(25px) brightness(0.4);opacity:0.9}
-#portada::before{content:'';position:absolute;inset:0;z-index:1;background-image:url('foto7.jpeg');background-size:contain;background-position:center bottom;background-repeat:no-repeat;transform:scale(1.2);transform-origin:center bottom}
+#portada::before{content:'';position:absolute;inset:0;z-index:1;background-image:url('foto7.jpeg');background-size:contain;background-position:center bottom;background-repeat:no-repeat;transform:scale(1.15);transform-origin:center bottom}
 
-#portada .contenido{position:relative;z-index:2;max-width:420px;width:90%;margin-top:auto;display:flex;flex-direction:column;align-items:center;background:rgba(255, 255, 255, 0.4);padding:25px 20px;border-radius:22px;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 10px 40px rgba(0,0,0,0.25);border:1px solid rgba(255, 255, 255, 0.6)}
-#portada .adorno{width:140px;margin-bottom:8px;opacity:0.95;color:#3b0a18}
+#portada .contenido{position:relative;z-index:2;max-width:420px;width:90%;margin-top:auto;display:flex;flex-direction:column;align-items:center;background:rgba(253, 251, 247, 0.55);padding:25px 20px;border-radius:22px;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 10px 40px rgba(0,0,0,0.25);border:1px solid rgba(255, 255, 255, 0.7)}
+#portada .adorno{width:140px;margin-bottom:8px;opacity:0.95;color:#5c4333}
 
 /* Título de portada */
-#portada h1{font-family:'EB Garamond',serif;font-size:clamp(30px, 5.5vw, 42px);font-weight:600;color:#2b0813;line-height:1.15;letter-spacing:0.5px;text-shadow:0 0 10px rgba(255,255,255,0.9)}
-#portada h1 span{display:block;margin-top:4px;font-weight:400;color:#3b0a18}
+#portada h1{font-family:'EB Garamond',serif;font-size:clamp(30px, 5.5vw, 42px);font-weight:600;color:#3d2c21;line-height:1.15;letter-spacing:0.5px;text-shadow:0 0 10px rgba(255,255,255,0.9)}
+#portada h1 span{display:block;margin-top:4px;font-weight:400;color:#5c4333}
 
 /* Botón comenzar */
-#portada .btn{margin-top: 20px;background: #ffffff;border: 1px solid rgba(0, 0, 0, 0.1);color: #2b0813;padding: 14px 32px;border-radius: 40px;font-size: 19px;font-family: 'Cormorant Garamond', serif;font-weight: 700;cursor: pointer;box-shadow: 0 6px 20px rgba(0,0,0,0.25);transition: all 0.2s ease;}
+#portada .btn{margin-top:20px;background:#ffffff;border:1px solid rgba(0, 0, 0, 0.08);color:#3d2c21;padding:14px 32px;border-radius:40px;font-size:19px;font-family:'Cormorant Garamond',serif;font-weight:700;cursor:pointer;box-shadow:0 6px 20px rgba(0,0,0,0.2);transition:all 0.2s ease}
 #portada .btn:active{transform:scale(0.96)}
 
 /* CONTENIDO */
-#contenido{display:none;background:#fcf7f8;position:relative;z-index:10}
+#contenido{display:none;background:#fdfbf7;position:relative;z-index:10}
 #galeria{padding:40px 0 20px}
-#galeria h2{text-align:center;font-family:'EB Garamond',serif;font-size:clamp(30px, 6vw, 42px);color:#4a1525;font-weight:400;margin-bottom:5px}
-#galeria .sub{text-align:center;font-size:13px;letter-spacing:2px;opacity:0.7;margin-bottom:20px;color:#8c2d42}
+#galeria h2{text-align:center;font-family:'EB Garamond',serif;font-size:clamp(28px, 5.5vw, 40px);color:#5c4333;font-weight:400;margin-bottom:5px;padding:0 15px}
+#galeria .sub{text-align:center;font-size:13px;letter-spacing:2px;opacity:0.75;margin-bottom:20px;color:#8c6d58}
 
-/* SLIDER Y FOTOS */
+/* SLIDER Y FOTOS RESPONSIVE */
 .slider{width:100%;display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scroll-behavior:smooth}
 .slider::-webkit-scrollbar{display:none}
-.slide{flex:0 0 100%;scroll-snap-align:center;padding:0 20px;display:flex;justify-content:center}
-.card{background:#fff;border-radius:24px;padding:14px;box-shadow:0 10px 30px rgba(74, 21, 37, 0.06);max-width:450px;width:100%;border:1px solid #f2e3e6;display:flex;flex-direction:column;align-items:center}
-.card img{width:100%;height:55vh;max-height:500px;min-height:300px;object-fit:contain;background:#fdf8f9;border-radius:16px;display:block}
-.card .texto{text-align:center;padding:18px 10px 10px;width:100%}
-.card .texto h3{font-family:'EB Garamond',serif;font-size:26px;color:#5c192c;font-weight:600;margin-bottom:6px}
-.card .texto p{font-size:18px;line-height:1.4;color: #2b0813;opacity:0.85}
+.slide{flex:0 0 100%;scroll-snap-align:center;padding:0 15px;display:flex;justify-content:center}
+.card{background:#faf4eb;border-radius:24px;padding:14px;box-shadow:0 10px 30px rgba(92, 67, 51, 0.06);max-width:450px;width:100%;border:1px solid #ebdcd0;display:flex;flex-direction:column;align-items:center}
+.card img{width:100%;height:52vh;height:52dvh;max-height:480px;min-height:280px;object-fit:contain;background:#f5ece1;border-radius:16px;display:block}
+.card .texto{text-align:center;padding:16px 10px 8px;width:100%}
+.card .texto h3{font-family:'EB Garamond',serif;font-size:25px;color:#5c4333;font-weight:600;margin-bottom:6px}
+.card .texto p{font-size:18px;line-height:1.4;color:#3d2c21;opacity:0.9}
 
 /* CONTROLES */
 .dots{display:flex;justify-content:center;gap:8px;margin:20px 0 15px;flex-wrap:wrap;padding:0 20px}
-.dots span{width:8px;height:8px;border-radius:50%;background:#e8d0d5;transition:0.3s}
-.dots span.active{background:#8c2d42;width:24px;border-radius:10px}
+.dots span{width:8px;height:8px;border-radius:50%;background:#e3d3c5;transition:0.3s}
+.dots span.active{background:#8c6d58;width:24px;border-radius:10px}
 .flechas{display:flex;justify-content:center;gap:20px;margin-bottom:30px}
-.flechas button{background:#fff;border:1px solid #ebd4d8;width:45px;height:45px;border-radius:50%;cursor:pointer;font-size:22px;color:#8c2d42;box-shadow:0 4px 10px rgba(0,0,0,0.05);transition:0.2s}
+.flechas button{background:#fff;border:1px solid #e3d3c5;width:45px;height:45px;border-radius:50%;cursor:pointer;font-size:22px;color:#8c6d58;box-shadow:0 4px 10px rgba(0,0,0,0.04);transition:0.2s}
 .flechas button:active{transform:scale(0.9)}
 
 /* SEPARADOR DECORATIVO */
-.separador{width:100%;max-width:240px;margin:20px auto;display:block;opacity:0.8;color:#6b1d2f}
+.separador{width:100%;max-width:240px;margin:20px auto;display:block;opacity:0.75;color:#8c6d58}
 
 /* CARTA DECORADA */
-.carta{background:#fff;max-width:650px;width:calc(100% - 40px);margin:20px auto 60px;padding:45px 35px;border-radius:24px;box-shadow:0 12px 40px rgba(74, 21, 37, 0.05);border:1px solid #f2e3e6;line-height:1.8;position:relative}
-.carta h1{font-family:'EB Garamond',serif;font-size:40px;color:#4a1525;font-weight:400;margin-bottom:15px;text-align:center}
-.carta p{font-size:19px;margin-bottom:16px;color: #21060e;text-align:justify}
+.carta{background:#faf4eb;max-width:650px;width:calc(100% - 30px);margin:20px auto 60px;padding:40px 28px;border-radius:24px;box-shadow:0 12px 40px rgba(92, 67, 51, 0.05);border:1px solid #ebdcd0;line-height:1.8;position:relative}
+.carta h1{font-family:'EB Garamond',serif;font-size:38px;color:#5c4333;font-weight:400;margin-bottom:15px;text-align:center}
+.carta p{font-size:19px;margin-bottom:16px;color:#3d2c21;text-align:justify}
 
 /* CRÉDITOS */
-.creditos{font-size: 11px;color: #9c7881;letter-spacing: 1px;margin-top: 30px;text-align: center;}
+.creditos{font-size:11px;color:#9e8777;letter-spacing:1px;margin-top:30px;text-align:center}
 
 audio{display:none}
 
 @media(min-width:768px){
-  .card img{height:60vh}
-  .carta{padding:55px 50px}
+  .card img{height:58vh}
+  .carta{padding:55px 50px;width:calc(100% - 40px)}
 }
 </style>
 </head>
 <body>
 
-<!-- Archivo de música ajustado al subido en GitHub -->
+<!-- Archivo de música subido -->
 <audio id="audio" loop preload="auto">
   <source src="Juanes - Para Tu Amor (Official Music Video).mp3" type="audio/mpeg">
 </audio>
@@ -90,17 +90,16 @@ audio{display:none}
     <h2>NUESTRA HISTORIA Y TUS MOMENTOS</h2>
     <p class="sub">UN RECORRIDO ESPECIAL PARA TI</p>
     <div class="slider" id="slider">
-      <div class="slide"><div class="card"><img src="foto1.jpeg"><div class="texto"><h3>El inicio</h3><p>Un pequeño viaje en el tiempo, espero te guste.</p></div></div></div>
-      <div class="slide"><div class="card"><img src="foto2.jpeg"><div class="texto"><h3>Momentos especiales</h3><p>Un pequeño viaje en el tiempo, espero te guste.</p></div></div></div>
-      <div class="slide"><div class="card"><img src="foto3.jpeg"><div class="texto"><h3>Tus mejores sonrisas</h3><p>Mírate,  todo un galán con  las chicas.</p></div></div></div>
-      <div class="slide"><div class="card"><img src="foto4.jpeg"><div class="texto"><h3>Tu esencia</h3><p>Cachaco y creído.</p></div></div></div>
-      <div class="slide"><div class="card"><img src="foto5.jpeg"><div class="texto"><h3>Aventuras juntos</h3><p>Aquí ya todo un adolescente, dejaste tu niñez para empezar a crear momentos más memorables que hoy por hoy cuando cuentas tus historias me haces reír sin parar.</p></div></div></div>
-      <div class="slide"><div class="card"><img src="foto6.jpeg"><div class="texto"><h3>Tu determinación</h3><p>De nuestras primeras fotos juntos, de nuestros primeros momentos juntos y la felicidad con la que empezamos este camino.</p></div></div></div>
-      <div class="slide"><div class="card"><img src="foto7.jpeg"><div class="texto"><h3>Complicidad</h3><p> ¿Quién pensaría que seríamos un familia? 
-Estamos construyendo nuestro hogar, nuestro pequeño núcleo familiar, Emma Lunna: un pedacito tuyo, un pedacito mío y por siempre  nuestro gran amor.</p></div></div></div>
-      <div class="slide"><div class="card"><img src="foto8.jpeg"><div class="texto"><h3>Lleno de luz</h3><p>Emma y yo amamos cuando nos cuidas, cuando nos hablas, cuando nos acaricias.</p></div></div></div>
-      <div class="slide"><div class="card"><img src="foto9.jpeg"><div class="texto"><h3>Orgullo total</h3><p>Tu gran pasión, las motos y tu mejor compañía  Turquesa, este recuerdo espero lo guardes con mucho amor para que en unos años puedas mostrarle a Emma este tipo de recuerdos tan sencillos pero con un significado maravilloso en tu vida.</p></div></div></div>
-      <div class="slide"><div class="card"><img src="foto10.jpeg"><div class="texto"><h3>Siempre juntos</h3><p>Aunque el camino sea difícil, sea pesado, quiero decirte que confío plenamente en que serás un papá maravilloso, Emma te va a amar con todo el corazón y este recuerdo sin duda es uno de los mejores porque justo en ese momento pudiste sentir sus latidos, pudiste conocerla por primera vez y pudiste experimentar lo maravilloso de este camino como papá.</p></div></div></div>
+      <div class="slide"><div class="card"><img src="foto1.jpeg"><div class="texto"><h3>Un viaje en el tiempo</h3><p>Un pequeño viaje en el tiempo, espero te guste.</p></div></div></div>
+      <div class="slide"><div class="card"><img src="foto2.jpeg"><div class="texto"><h3>Un viaje en el tiempo</h3><p>Un pequeño viaje en el tiempo, espero te guste.</p></div></div></div>
+      <div class="slide"><div class="card"><img src="foto3.jpeg"><div class="texto"><h3>Todo un galán</h3><p>Mírate, todo un galán con las chicas.</p></div></div></div>
+      <div class="slide"><div class="card"><img src="foto4.jpeg"><div class="texto"><h3>Cachaco y elegante</h3><p>Cachaco y creído.</p></div></div></div>
+      <div class="slide"><div class="card"><img src="foto5.jpeg"><div class="texto"><h3>Creando historias</h3><p>Aquí ya todo un adolescente, dejaste tu niñez para empezar a crear momentos más memorables que hoy por hoy cuando cuentas tus historias me haces reír sin parar.</p></div></div></div>
+      <div class="slide"><div class="card"><img src="foto6.jpeg"><div class="texto"><h3>El inicio de nuestro camino</h3><p>De nuestras primeras fotos juntos, de nuestros primeros momentos juntos y la felicidad con la que empezamos este camino.</p></div></div></div>
+      <div class="slide"><div class="card"><img src="foto7.jpeg"><div class="texto"><h3>Construyendo nuestro hogar</h3><p>¿Quién pensaría que seríamos una familia? Estamos construyendo nuestro hogar, nuestro pequeño núcleo familiar, Emma Lunna: un pedacito tuyo, un pedacito mío y por siempre nuestro gran amor.</p></div></div></div>
+      <div class="slide"><div class="card"><img src="foto8.jpeg"><div class="texto"><h3>Amor de papá</h3><p>Emma y yo amamos cuando nos cuidas, cuando nos hablas, cuando nos acaricias.</p></div></div></div>
+      <div class="slide"><div class="card"><img src="foto9.jpeg"><div class="texto"><h3>Tu gran pasión y compañía</h3><p>Tu gran pasión, las motos y tu mejor compañía Turquesa, este recuerdo espero lo guardes con mucho amor para que en unos años puedas mostrarle a Emma este tipo de recuerdos tan sencillos pero con un significado maravilloso en tu vida.</p></div></div></div>
+      <div class="slide"><div class="card"><img src="foto10.jpeg"><div class="texto"><h3>Su primer latido</h3><p>Aunque el camino sea difícil, sea pesado, quiero decirte que confío plenamente en que serás un papá maravilloso, Emma te va a amar con todo el corazón y este recuerdo sin duda es uno de los mejores porque justo en ese momento pudiste sentir sus latidos, pudiste conocerla por primera vez y pudiste experimentar lo maravilloso de este camino como papá.</p></div></div></div>
     </div>
     <div class="dots" id="dots"></div>
     <div class="flechas"><button onclick="mover(-1)">‹</button><button onclick="mover(1)">›</button></div>
@@ -110,16 +109,21 @@ Estamos construyendo nuestro hogar, nuestro pequeño núcleo familiar, Emma Lunn
   <div class="carta">
     <svg class="separador" viewBox="0 0 200 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 10 H80 M120 10 H200" stroke="currentColor" stroke-width="0.8"/><g stroke="currentColor" stroke-width="0.8" fill="none"><path d="M100 2 Q103 5 100 8 Q97 11 100 14"/><path d="M102 4 Q108 3 112 6 Q106 7 102 4"/><path d="M98 12 Q92 13 88 10 Q94 9 98 12"/></g></svg>
     
-    <h1>Mi Amor, Esneider</h1>
+    <h1>Mi amor</h1>
     
-    <p>Hoy, 3 de octubre, celebramos tu vida y no imaginas la inmensa felicidad y gratitud que siente mi corazón al poder estar a tu lado en un día tan especial[cite: 9].</p>
-    <p>Quiero darte las gracias por ser el hombre maravilloso que eres, por tu entrega, tu paciencia y por llenar de luz cada uno de mis días[cite: 9]. Admiro profundamente tu determinación, tu fuerza ante cada reto y esa forma tan bonita que tienes de cuidar a quienes amas[cite: 9].</p>
-    <p>Deseo que este nuevo año de vida esté lleno de bendiciones, metas cumplidas, risas y sobre todo, mucha felicidad. Quiero acompañarte en cada paso, celebrar tus victorias y estar siempre ahí para ti[cite: 9].</p>
-    <p>Gracias por cruzarte en mi camino y por hacerme tan feliz. Que este sea solo el inicio de muchos años más llenos de amor[cite: 9].</p>
+    <p>Primeramente agradecerle a mi Dios por permitirte cumplir un año más de vida con mucha salud.</p>
+    <p>Eres una persona demasiado importante para mí, aunque las cosas sean complejas la mayor parte del tiempo, quiero decirte gracias por ser el pilar de nuestro hogar, por ayudarme en tantas dificultades y por brindarme amor.</p>
+    <p>Sé que existen muchas diferencias entre los dos y espero algún día poder estar bien para que salgamos adelante juntos con nuestra bebé.</p>
+    <p>Eres una persona increíble, graciosa, inteligente, responsable, noble y con un corazón inmenso.</p>
+    <p>Me llena de felicidad el hecho de saber que Dios te bendice cada día con vida, con salud, con empleo, con tu forma única de ser, eres maravilloso y espero que al pasar de los años seas mejor persona.</p>
+    <p>Eres un excelente hijo, excelente hermano, excelente amigo y por supuesto serás un excelente padre. Gracias por bendecir la vida de cada persona que te rodea y por ser tan auténtico, tan único y tan loco.</p>
+    <p>Hoy celebro tu vida de la mano de Dios y ojalá pueda acompañarte en momentos tan importantes de ahora en adelante.</p>
+    <p>Ojalá puedas ser muy feliz, ojalá puedas cumplir tus sueños, tus metas y siempre me voy a alegrar por tus logros, siempre te voy a desear lo mejor del mundo.</p>
+    <p>Gracias por enseñarme tantas cosas, por haber creado momentos tan felices y sobre todo gracias por nuestra hija…</p>
 
     <svg class="separador" viewBox="0 0 200 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 10 H80 M120 10 H200" stroke="currentColor" stroke-width="0.8"/><g stroke="currentColor" stroke-width="0.8" fill="none"><path d="M100 2 Q103 5 100 8 Q97 11 100 14"/><path d="M102 4 Q108 3 112 6 Q106 7 102 4"/><path d="M98 12 Q92 13 88 10 Q94 9 98 12"/></g></svg>
 
-    <p style="text-align:right;font-weight:bold;margin-top:20px;font-size:21px;">¡Feliz Cumpleaños! ❤️️<br>Te amo</p>
+    <p style="text-align:right;font-weight:bold;margin-top:20px;font-size:21px;">Te amo, Diosito bendiga tu vida y cuide tus pasos.<br>¡Felices 29! ❤</p>
     
     <p class="creditos">Hecho con mucho amor para ti ✨</p>
   </div>
